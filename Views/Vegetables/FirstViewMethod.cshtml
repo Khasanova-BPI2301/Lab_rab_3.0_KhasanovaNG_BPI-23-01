@@ -1,5 +1,15 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model IEnumerable<Lab_rab_3._0_KhasanovaNG_BPI_23_01.Models.Vegetable>
+
+<div style="margin-bottom: 20px;">
+    <a href="/Vegetables/FirstViewMethod">Список овощей</a> |
+    <a href="/Vegetables/SecondViewMethod">Отсортированная таблица</a> |
+    <a href="/Vegetables/ThirdViewMethod">Группировка по буквам</a>
+</div>
+
+<h2>Список овощей</h2>
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@item.Name</li>
+    }
+</ul>
